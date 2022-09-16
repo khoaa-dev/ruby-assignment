@@ -1,13 +1,14 @@
 print("Nhập số thứ nhất: ")
-a = gets
+num_1 = gets.to_i
 print("Nhập số thứ hai: ")
-b = gets
+num_2 = gets.to_i
 print("Nhập số thứ ba: ")
-c = gets
+num_3 = gets.to_i
 
 numbers = []
-numbers.push(a)
-numbers.push(b)
-numbers.push(c)
+numbers.push(num_1)
+numbers.push(num_2)
+numbers.push(num_3)
 
-print("Thứ tự tăng dần: #{numbers.sort!}" )
+puts("Thứ tự tăng dần: #{numbers.sort}" )
+puts("Thứ tự giảm dần: #{numbers.sort.reverse}" )
