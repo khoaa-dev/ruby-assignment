@@ -8,7 +8,7 @@ class SinhVien
     end
 
     def calculateAveragePoint(mathPoint, physicalPoint, chemistryPoint) 
-        averagePoint = (mathPoint + physicalPoint + chemistryPoint)
+        averagePoint = (mathPoint + physicalPoint + chemistryPoint)/3
         averagePoint
     end
 
