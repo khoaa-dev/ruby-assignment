@@ -4,8 +4,8 @@ require_relative "KySu"
 require_relative "NhanVien"
 require_relative "QLCB"
 
-qlcb = QLCB.new
-canBos = []
+qlcb_132 = QLCB.new
+canBos_132 = []
 while(true)
     puts("---------------------------------------")
     puts("Quan Ly Can Bo")
@@ -14,9 +14,9 @@ while(true)
     puts("3. Hien thi thong tin danh sach can bo")
     puts("4. Thoat")
     print("Chon chuc nang: ")
-    n = gets.to_i
+    n_132 = gets.to_i
 
-    case n
+    case n_132
     when 1
         puts("---------------------------------------")
         puts("Them moi Can Bo")
@@ -25,56 +25,56 @@ while(true)
         puts("3. Them ky su")
         puts("4. Thoat")
         print("Chon chuc nang: ")
-        a = gets.to_i
-        case a
+        a_132 = gets.to_i
+        case a_132
         when 1
             print("Nhap ho ten: ")
-            hoTen = gets
+            hoTen_132 = gets
             print("Nhap tuoi: ")
-            tuoi = gets
+            tuoi_132 = gets
             print("Nhap gioi tinh: ")
-            gioiTinh = gets
+            gioiTinh_132 = gets
             print("Nhap dia chi: ")
-            diaChi = gets
+            diaChi_132 = gets
             print("Nhap cong viec: ")
-            congViec = gets
-            nhanVien = NhanVien.new(hoTen, tuoi, gioiTinh, diaChi, congViec)
-            qlcb.themMoi(canBos, nhanVien)
+            congViec_132 = gets
+            nhanVien_132 = NhanVien.new(hoTen_132, tuoi_132, gioiTinh_132, diaChi_132, congViec_132)
+            qlcb_132.themMoi(canBos_132, nhanVien)
         when 2
             print("Nhap ho ten: ")
-            hoTen = gets
+            hoTen_132 = gets
             print("Nhap tuoi: ")
-            tuoi = gets
+            tuoi_132 = gets
             print("Nhap gioi tinh: ")
-            gioiTinh = gets
+            gioiTinh_132 = gets
             print("Nhap dia chi: ")
-            diaChi = gets
+            diaChi_132 = gets
             print("Nhap cap bac: ")
-            bac = gets
-            congNhan = CongNhan.new(hoTen, tuoi, gioiTinh, diaChi, bac)
-            qlcb.themMoi(canBos, congNhan)
+            bac_132 = gets
+            congNhan_132 = _132.new(hoTen_132, tuoi_132, gioiTinh_132, diaChi_132, bac_132)
+            qlcb_132.themMoi(canBos_132, congNhan_132)
         when 3
             print("Nhap ho ten: ")
-            hoTen = gets
+            hoTen_132 = gets
             print("Nhap tuoi: ")
-            tuoi = gets
+            tuoi_132 = gets
             print("Nhap gioi tinh: ")
-            gioiTinh = gets
+            gioiTinh_132 = gets
             print("Nhap dia chi: ")
-            diaChi = gets
+            diaChi_132 = gets
             print("Nhap nganh dao tao: ")
-            nganhDaoTao = gets
-            kySu = KySu.new(hoTen, tuoi, gioiTinh, diaChi, nganhDaoTao)
-            qlcb.themMoi(canBos, kySu)
+            nganhDaoTao_132 = gets
+            kySu_132 = KySu.new(hoTen_132, tuoi_132, gioiTinh_132, diaChi_132, nganhDaoTao_132)
+            qlcb_132.themMoi(canBos_132, kySu)
         else
             print("Khong hop le")
         end
     when 2
         print("Nhap ho ten muon tim: ")
-        key = gets.to_s
-        qlcb.timKiem(key, canBos)
+        key_132 = gets.to_s
+        qlcb_132.timKiem(key_132, canBos_132)
     when 3 
-        qlcb.hienThiDanhSach(canBos)
+        qlcb_132.hienThiDanhSach(canBos_132)
     when 4
         return
     end
