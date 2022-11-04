@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <div class="container">
+    <h1>Product Edit</h1>
+
+    <%= form_with method: :put, model: @product do |form| %>
+      <%= form.text_field :name, placeholder: "name", class: 'form-control mb-2 w-50 d-flex align-items-center' %>
+      <%= form.text_field :price, placeholder: "price", class: 'form-control mb-2' %>
+      <%= form.submit %>
+    <% end %>
+  </div>
+<% end %>

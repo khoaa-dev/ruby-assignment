@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <div class="container">
+    <h1>Create New Product</h1>
+    <%= form_with url: "/product", method: :post, model: @product do |form| %>
+      <%= form.text_field :name, placeholder: "name" %>
+      <%= form.text_field :price, placeholder: "price" %>
+      <%= form.submit %>
+    <% end %>
+  </div>
+<% end %>
+

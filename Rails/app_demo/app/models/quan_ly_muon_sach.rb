@@ -1,0 +1,2 @@
+class QuanLyMuonSach < ApplicationRecord
+end

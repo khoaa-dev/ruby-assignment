@@ -1,0 +1,30 @@
+<% content_for :body do %>
+<h1>Product CRUD</h1>
+<%= button_to 'New', new_product_path(), class: 'btn btn-primary text-white', method: :get %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Remove</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <th scope="row"><%= product.id %></th>
+        <td><p><%= product.name.to_s %></p></td>
+        <td><%= product.price.to_s %></td>
+        <td>
+          <span><%= button_to 'Edit', edit_product_path(product), method: :get, class: 'btn btn-info' %></span>
+        </td>
+        <td>
+          <span><%= button_to 'Remove', product, method: :delete, class: 'btn btn-danger' %></span>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%end%>
